@@ -1,0 +1,37 @@
+
+/* *********************************** defaults */
+body {
+	background-color: #E9E8E3; 
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	color: black;
+}
+
+h1, h2, h3, h4, h5,h6 {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 600; 
+}
+h1 {
+	font-size: inherit;
+	text-transform: uppercase;
+}
+
+/* ********************************* base styles */
+
+/* ************ fonts */
+/* lato light (100)
+/* lato regular (400)
+/* lato bold (700)
+/* lato black (900)
+/* dosis semibold (600)
+ */
+
+/* ******************************* basic layout */
+
+/* ************************************ HEADER */
+
+
+/* ******************* menu navigation */
+
+
+
