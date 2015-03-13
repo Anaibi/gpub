@@ -30,7 +30,8 @@
 /* 100px */
 /* enjoy-mondays css TODO refactor later */
 /* positioning, box model, typo, visual*/
-body {
+body, body * {
+  /* check better way? body * too strong?*/
   font-family: "Lato", sans-serif;
   font-weight: 100;
   color: #4a4a4a;
