@@ -2,7 +2,10 @@
 
 /* classes */
 .clearfix { clear: both; }
-.fixed { position: fixed; }
+.fixed { 
+  position: fixed;
+  z-index: 1000;
+}
 .fullwidth { width: 100%; }
 .screan-reader-text {
 	position: absolute;
@@ -12,7 +15,7 @@
 	font-size: 0;
 }
 .hidden { display: none; }
-.top { top: 0; }
+.top0 { top: 0; }
 
 /* color constants */
 
@@ -93,17 +96,14 @@ hr {
   clear: both;
 }
 
-.header {
-	background-color: $background_1;
+#main-header {
+	overflow: visible;
+  background-color: $background_1;
 }
 
 #main-header {
-	overflow: visible;
-}
-#main-header {
 	height: 2em;
 	background-color: $background_1;
-	z-index: 1000;
 }
 #fixed-header-aux {
 	height: 2em;
