@@ -62,6 +62,10 @@ $fix_header_height: 6em;
 
 $fucsia_border_bottom: solid $FUXSIA 3px;
 
+$active_link {
+  border-bottom:L $fucsia_border_bottom;
+}
+
 /* enjoy-mondays css TODO refactor later */
 /* positioning, box model, typo, visual*/
 
@@ -82,7 +86,7 @@ body.#{$theme} , body.#{$theme}  * { /* check better way? body * too strong?*/
 }
 
 .#{$theme} a:active { 
-  border-bottom: $fucsia_border_bottom;
+  @extend $active_link;
 }
 
 .#{$theme} a:hover, .#{$theme} a.active {
