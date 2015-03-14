@@ -1,3 +1,17 @@
+/* postition constants */
+$fix_header_height : 60px;
+
+/* color constants */
+$GRAY: #4a4a4a;
+$LIGHT_GRAY: #e9e8e3;
+$DARK_GRAY:	#3a3a3a;
+$DARK_BLUE:	#363b48;	
+$FUXSIA: #df3f54;
+$LIGHT_FUXSIA: #f17c71;
+
+/* font constants */
+$Lato: 'Lato', sans-serif;
+$Dosis: 'Dosis', sans-serif;
 
 
 /* classes */
@@ -8,37 +22,29 @@
 }
 .fullwidth { width: 100%; }
 .screan-reader-text {
-	position: absolute;
-	height: 0;
-	width: 0;
-	opacity: 0;
-	font-size: 0;
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  font-size: 0;
 }
 .hidden { display: none; }
 .top0 { top: 0; }
-
-/* color constants */
-
-$GRAY: #4a4a4a;
-$LIGHT_GRAY: #e9e8e3;
-$DARK_GRAY:	#3a3a3a;
-$DARK_BLUE:	#363b48;	
-$FUXSIA: #df3f54;
-$LIGHT_FUXSIA: #f17c71;
-
-/* font constants */
-
-$Lato: 'Lato', sans-serif;
-$Dosis: 'Dosis', sans-serif;
-
+.topHeader { top: $fix_header_height; }
 
 
 /* enjoy-mondays pattern variables */
+
+$theme: enjoy-mondays;
 
 $background_1 : $LIGHT_GRAY;
 $background_2 : $DARK_GRAY;
 $background_3 : $DARK_GRAY;
 $background_4 : $FUXSIA;
+
+$a_color: $DARK_GRAY;
+$base_font_color: $GRAY;
+
 
 $font_1: $Lato;
 $font_2: $Dosis;
@@ -47,48 +53,66 @@ $bolder: 900;
 $light: 100;
 $bold: 600;
 
-$base_font_size: 18px; 
-$p_size: 1.25em; /* 20px */
-$a_size: 1em; /* 18px; */
-$h_size: 6em; /* 100px */
+$base_font_size: 62.5%; 
+$p_size: 1.25em; 
+$a_size: 1em; 
+$h_size: 2.5em; 
+
+$fix_header_height: 6em;
+
+$fucsia_border_bottom: solid $FUXSIA 3px;
 
 /* enjoy-mondays css TODO refactor later */
 /* positioning, box model, typo, visual*/
 
-body, body * { /* check better way? body * too strong?*/
+body.#{$theme} , body.#{$theme}  * { /* check better way? body * too strong?*/
   font-family: $font_1;
   font-weight: $light;
-  color: $GRAY;
+  /*font-size: $base_font_size;*/ /* flatdoc theme has body 13px */
+  color: $base_font_color;
   background-color: $background_1; 
 
 }
 
-a {
+.#{$theme} a {
   text-decoration: none;
   font-size: $a_size;
-  color: #000;
+  color: $a_color;
   font-weight: $bolder;
 }
 
-ul, li {
+.#{$theme} a:active { 
+  border-bottom: $fucsia_border_bottom;
+}
+
+.#{$theme} a:hover, .#{$theme} a.active {
+  @extend a:active;
+}
+
+/* or, using flatdoc representation, change only 'dash' color: */
+.menu a.active:after {
+  background-color: $FUXSIA;
+}
+
+.#{$theme} ul, li {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5,h6 {
-  font-family: $font_2;
-  font-weight: $bold; 
+.#{$theme} h1, h2, h3, h4, h5,h6 {
+  font-family: $font_2 !important;
+  font-weight: $bold !important; 
 }
 
-h1 {
+.#{$theme} h1 {
   font-size: $h_size;  
   text-transform: uppercase;
 }
 
-p {
+.#{$theme} p {
   font-size: $p_size;
 }
 
-hr {
+.#{$theme} hr {
   border: 0;
   height: 3px;
   width: 18%;
@@ -96,15 +120,18 @@ hr {
   clear: both;
 }
 
-#main-header {
-	overflow: visible;
-  background-color: $background_1;
-}
+/* nav header for flatdoc */
 
-#main-header {
-	height: 2em;
+.#{$theme} #main-header {
+	/*height: $fix_header_height;*/ /* without js leave alone */
 	background-color: $background_1;
 }
-#fixed-header-aux {
-	height: 2em;
+.#{$theme} #fixed-header-aux {
+	height: $fix_header_height;
 }
+
+ /* if menubar has class fixed, animate main-header to the left */
+ .#{$theme} #main-header .left {
+  position: relative;
+  left: 220px;
+ }
