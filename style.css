@@ -26,7 +26,7 @@
   top: 0; }
 
 .topHeader {
-  top: 60px; }
+  top: 1.75em; }
 
 /* enjoy-mondays pattern variables */
 /* enjoy-mondays css TODO refactor later */
@@ -47,7 +47,7 @@ body.enjoy-mondays, body.enjoy-mondays * {
   font-weight: 900; }
 
 .enjoy-mondays a:active, .enjoy-mondays a:hover, .enjoy-mondays a.active {
-  border-bottom: solid #df3f54 3px; }
+  border-bottom: L solid #df3f54 3px; }
 
 /* or, using flatdoc representation, change only 'dash' color: */
 .menu a.active:after {
@@ -81,7 +81,7 @@ body.enjoy-mondays, body.enjoy-mondays * {
   background-color: #e9e8e3; }
 
 .enjoy-mondays #fixed-header-aux {
-  height: 6em; }
+  height: 1.75em; }
 
 /* if menubar has class fixed, animate main-header to the left */
 .enjoy-mondays #main-header .left {

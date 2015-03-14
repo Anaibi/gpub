@@ -1,5 +1,5 @@
 /* postition constants */
-$fix_header_height : 60px;
+$fix_header_height : 1.75em;
 
 /* color constants */
 $GRAY: #4a4a4a;
@@ -58,11 +58,9 @@ $p_size: 1.25em;
 $a_size: 1em; 
 $h_size: 2.5em; 
 
-$fix_header_height: 1.75em;
 
 $fucsia_border_bottom: solid $FUXSIA 3px;
-
-$active_link {
+@mixin active_link {
   border-bottom:L $fucsia_border_bottom;
 }
 
@@ -86,7 +84,7 @@ body.#{$theme} , body.#{$theme}  * { /* check better way? body * too strong?*/
 }
 
 .#{$theme} a:active { 
-  @extend $active_link;
+  @include active_link;
 }
 
 .#{$theme} a:hover, .#{$theme} a.active {
