@@ -56,7 +56,7 @@ $theme: #enjoy-mondays;
 
 $background_1 : $LIGHT_GRAY;
 $background_2 : $DARK_GRAY;
-$background_3 : $DARK_GRAY;
+$background_3 : $DARK_BLUE;
 $background_4 : $FUXSIA;
 
 $a_color: $DARK_GRAY;
@@ -114,7 +114,7 @@ body#{$theme} {
 #{$theme} .content {
   background-color: $background_1;
 }
-
+  
 
 /* links */
 
@@ -173,7 +173,6 @@ body#{$theme} {
   position: relative;
   left: 220px;
  }
-
 
 
 
