@@ -45,8 +45,8 @@
 <script>
     Flatdoc.run({
       fetcher: Flatdoc.github('Anaibi/gpub'),
-      highlight: function (code) {
-        return hljs.highlight(code).value;
+      highlight: function (code, value) {
+        return hljs.highlight(lang, code).value;
       }
     });
 </script>
