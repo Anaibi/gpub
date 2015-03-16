@@ -1,4 +1,4 @@
-/* postition constants */
+/* flatdoc constants */
 /* color constants */
 /* font constants */
 /* classes */
@@ -25,14 +25,18 @@
 .top0 {
   top: 0; }
 
-.topHeader {
-  top: 1.75em; }
-
+/* */
 /* enjoy-mondays pattern variables */
+/* colors */
+/* typos */
+/* */
+/* elements */
+/* header */
+/* links */
+/* */
 /* enjoy-mondays css TODO refactor later */
 /* positioning, box model, typo, visual*/
 body.enjoy-mondays, body.enjoy-mondays * {
-  /* check better way? body * too strong?*/
   font-family: "Lato", sans-serif;
   font-weight: 100;
   /*font-size: $base_font_size;*/
@@ -40,6 +44,7 @@ body.enjoy-mondays, body.enjoy-mondays * {
   color: #4a4a4a;
   background-color: #e9e8e3; }
 
+/* links */
 .enjoy-mondays a {
   text-decoration: none;
   font-size: 1em;
@@ -47,11 +52,17 @@ body.enjoy-mondays, body.enjoy-mondays * {
   font-weight: 900; }
 
 .enjoy-mondays a:active, .enjoy-mondays a:hover, .enjoy-mondays a.active {
-  border-bottom: L solid #df3f54 3px; }
+  border-bottom: solid #df3f54 3px; }
 
 /* or, using flatdoc representation, change only 'dash' color: */
-.menu a.active:after {
+.enjoy-mondays .menu a.active:after {
   background-color: #df3f54; }
+
+.enjoy-mondays .menu a:visited,
+.enjoy-mondays .menu a:hover,
+.enjoy-mondays .menu a.active {
+  border-bottom: none;
+  color: #df3f54; }
 
 .enjoy-mondays ul, li {
   list-style: none; }
@@ -76,12 +87,11 @@ body.enjoy-mondays, body.enjoy-mondays * {
 
 /* nav header for flatdoc */
 .enjoy-mondays #main-header {
-  /*height: $fix_header_height;*/
-  /* without js leave alone */
+  height: 20px;
   background-color: #e9e8e3; }
 
 .enjoy-mondays #fixed-header-aux {
-  height: 1.75em; }
+  height: 51px; }
 
 /* if menubar has class fixed, animate main-header to the left */
 .enjoy-mondays #main-header .left {
