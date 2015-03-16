@@ -48,7 +48,8 @@ $Dosis: 'Dosis', sans-serif;
 /* */
 /* enjoy-mondays pattern variables */
 
-$theme: enjoy-mondays;
+/*$theme: enjoy-mondays;*/
+$theme: #enjoy-mondays;
 
 
 /* colors */
@@ -99,81 +100,92 @@ $fucsia_border_bottom: solid $FUXSIA 3px;
 /* enjoy-mondays css TODO refactor later */
 /* positioning, box model, typo, visual*/
 
-body.#{$theme} { 
+body#{$theme} { 
   font-family: $font_1;
   font-weight: $light;
   /*font-size: $base_font_size;*/ /* flatdoc theme has body 13px */
   color: $base_font_color;
   background-color: $background_1; 
-
 }
+
+/* left menu and central content background need stating */
+#{$theme} .menubar,
+#{$theme} .content {
+  background-color: $background_1;
+}
+
 
 /* links */
 
-.#{$theme} a {
+#{$theme} a {
   text-decoration: none;
   font-size: $a_size;
   color: $a_color;
   font-weight: $bolder;
 }
 
-.#{$theme} a:active { 
+#{$theme} a:active { 
   @include active_link;
 }
 
-.#{$theme} a:hover, .#{$theme} a.active {
+#{$theme} a:hover, #{$theme} a.active {
   @extend a:active;
 }
 
 /* or, using flatdoc representation, change only 'dash' color: */
-.#{$theme} .menu a.active:after {
+#{$theme} .menu a.active:after {
   background-color: $FUXSIA;
 }
 
-.#{$theme} .menu a:visited, 
-.#{$theme} .menu a:hover,
-.#{$theme} .menu a.active {
+#{$theme} .menu a:visited, 
+#{$theme} .menu a:hover,
+#{$theme} .menu a.active {
   @include visited_link;
 }
 
-.#{$theme} ul, li {
-  list-style: none;
-}
 
-.#{$theme} h1, h2, h3, h4, h5,h6 {
+/* headers */
+
+#{$theme} h1, h2, h3, h4, h5,h6 {
   font-family: $font_2 !important;
   font-weight: $bold !important; 
 }
 
-.#{$theme} h1 {
+#{$theme} h1 {
   font-size: $h_size;  
   text-transform: uppercase;
 }
 
-.#{$theme} p {
+
+  /* nav header for flatdoc */
+
+#{$theme} .header {
+	height: $main_header_height;
+	background-color: $background_1;
+}
+#{$theme} #fixed-header-aux {
+	height: $fix_header_aux_height;
+}
+
+ /* TODO if menubar has class fixed, animate header to the left */
+ #{$theme} .header .left {
+  position: relative;
+  left: 220px;
+ }
+
+
+
+
+ /* elements */ 
+
+#{$theme} p {
   font-size: $p_size;
 }
 
-.#{$theme} hr {
+#{$theme} hr {
   border: 0;
   height: 3px;
   width: 18%;
   margin: 0 auto 3%;
   clear: both;
 }
-
-/* nav header for flatdoc */
-
-.#{$theme} #main-header {
-	height: $main_header_height;
-	background-color: $background_1;
-}
-.#{$theme} #fixed-header-aux {
-	height: $fix_header_aux_height;
-}
-
- /* if menubar has class fixed, animate main-header to the left */
- .#{$theme} #main-header .left {
-  position: relative;
-  left: 220px;
- }
