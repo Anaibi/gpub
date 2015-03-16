@@ -41,16 +41,15 @@
  <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
  <!-- script>hljs.initHighlightingOnLoad();</script -->
 
-
-  <!-- Initializer -->
-  <script>
+ <!-- Initializer -->
+<script>
     Flatdoc.run({
       fetcher: Flatdoc.github('Anaibi/gpub'),
-      highlight: function (code, value) {
+      highlight: function (code) {
         return hljs.highlight(code).value;
       }
     });
-  </script>
+</script>
 
 </head>
 <body role="flatdoc" id="enjoy-mondays" class="large-brief big-h3">
