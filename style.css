@@ -45,7 +45,8 @@ body#enjoy-mondays {
   color: #4a4a4a;
   background-color: #e9e8e3; }
 
-/* left menu and central content background need stating */
+/* left menu and central content background need re-stating */
+#enjoy-mondays .content-root,
 #enjoy-mondays .menubar,
 #enjoy-mondays .content {
   background-color: #e9e8e3; }
