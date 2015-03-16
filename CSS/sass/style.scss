@@ -108,7 +108,8 @@ body#{$theme} {
   background-color: $background_1; 
 }
 
-/* left menu and central content background need stating */
+/* left menu and central content background need re-stating */
+#{$theme} .content-root,
 #{$theme} .menubar,
 #{$theme} .content {
   background-color: $background_1;
