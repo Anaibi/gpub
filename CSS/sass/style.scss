@@ -99,7 +99,7 @@ $fucsia_border_bottom: solid $FUXSIA 3px;
 /* enjoy-mondays css TODO refactor later */
 /* positioning, box model, typo, visual*/
 
-body.#{$theme} , body.#{$theme}  * { 
+body.#{$theme} { 
   font-family: $font_1;
   font-weight: $light;
   /*font-size: $base_font_size;*/ /* flatdoc theme has body 13px */
