@@ -189,3 +189,9 @@ body#{$theme} {
   margin: 0 auto 3%;
   clear: both;
 }
+
+
+/* hightlight js fix */
+#{$theme} .hljs {
+  background-color: #3f3f3f !important;
+}

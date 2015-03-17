@@ -104,4 +104,8 @@ body#enjoy-mondays {
   margin: 0 auto 3%;
   clear: both; }
 
+/* hightlight js fix */
+#enjoy-mondays .hljs {
+  background-color: #3f3f3f !important; }
+
 /*# sourceMappingURL=style.css.map */
