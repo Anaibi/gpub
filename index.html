@@ -46,6 +46,7 @@
     Flatdoc.run({
       fetcher: Flatdoc.github('Anaibi/gpub'),
       highlight: function() {
+        console.log('hightligh called');
         return hljs.initHighlightingOnLoad();
       }
     });
