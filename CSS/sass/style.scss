@@ -207,7 +207,7 @@ body#{$theme} {
 
   .content ul, .content ol {
     margin-left: 0;
-    padding-left: 60px;
+    padding-left: 60px !important;
   }
 
   #{$theme} .content h1:first-child {
