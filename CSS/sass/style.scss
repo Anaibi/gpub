@@ -213,15 +213,28 @@ body#{$theme} {
     padding-top: 30px;
   }
 
+  #{$theme} .content > *:last-child {
+    padding-bottom: 40px;
+  }
+
   #{$theme} .content {
     background-color: $ZENBURN_BG !important;
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   #{$theme} .content h1,
   #{$theme} .content h2,
-  #{$theme} .content p {
+  #{$theme} .content p,
+  #{$theme} .content ul,
+  #{$theme} .content ol {
     background-color: $background_1;
+ }
+
+ /* fill rest of bg above pre tags...chapucilla, just checking if all this works */
+ #{$theme} .content pre + p {
+   margin-top: -130px !important;
+   padding-top: 140px !important;
  }
 }
 

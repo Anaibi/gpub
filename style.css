@@ -120,13 +120,24 @@ body#enjoy-mondays {
   #enjoy-mondays .content h1:first-child {
     padding-top: 30px; }
 
+  #enjoy-mondays .content > *:last-child {
+    padding-bottom: 40px; }
+
   #enjoy-mondays .content {
     background-color: #3f3f3f !important;
-    padding-top: 0; }
+    padding-top: 0;
+    padding-bottom: 0; }
 
   #enjoy-mondays .content h1,
   #enjoy-mondays .content h2,
-  #enjoy-mondays .content p {
-    background-color: #e9e8e3; } }
+  #enjoy-mondays .content p,
+  #enjoy-mondays .content ul,
+  #enjoy-mondays .content ol {
+    background-color: #e9e8e3; }
+
+  /* fill rest of bg above pre tags...chapucilla, just checking if all this works */
+  #enjoy-mondays .content pre + p {
+    margin-top: -130px !important;
+    padding-top: 140px !important; } }
 
 /*# sourceMappingURL=style.css.map */
