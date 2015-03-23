@@ -108,4 +108,13 @@ body#enjoy-mondays {
 #enjoy-mondays .hljs {
   background-color: #3f3f3f !important; }
 
+/* 3 column background fix */
+#enjoy-mondays .content {
+  background-color: #3f3f3f !important; }
+
+#enjoy-mondays .content h1,
+#enjoy-mondays .content h1,
+#enjoy-mondays .content h1 {
+  background-color: #e9e8e3; }
+
 /*# sourceMappingURL=style.css.map */
