@@ -18,6 +18,7 @@ $DARK_GRAY:	#3a3a3a;
 $DARK_BLUE:	#363b48;	
 $FUXSIA: #df3f54;
 $LIGHT_FUXSIA: #f17c71;
+$ZENBURN_BG: #3f3f3f; 
 
 
 /* font constants */
@@ -195,3 +196,15 @@ body#{$theme} {
 #{$theme} .hljs {
   background-color: #3f3f3f !important;
 }
+
+/* 3 column background fix */
+
+#{$theme} .content {
+  background-color: $ZENBURN_BG !important;
+}
+#{$theme} .content h1,
+#{$theme} .content h1,
+#{$theme} .content h1 {
+  background-color: $background_1;
+}
+
