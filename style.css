@@ -134,11 +134,14 @@ body#enjoy-mondays {
   #enjoy-mondays .content p,
   #enjoy-mondays .content ul,
   #enjoy-mondays .content ol {
-    background-color: #e9e8e3; }
+    background-color: #e9e8e3;
+    position: relative;
+    z-index: 2; }
 
-  /* fill rest of bg above pre tags...chapucilla, just checking if all this works */
+  /* fill rest of bg above pre tags...chapucilla, just checking if all this works, but at least this should be done with script */
   #enjoy-mondays .content pre + p {
     margin-top: -130px !important;
-    padding-top: 140px !important; } }
+    padding-top: 140px !important;
+    z-index: 1; } }
 
 /*# sourceMappingURL=style.css.map */

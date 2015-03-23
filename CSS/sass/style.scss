@@ -230,12 +230,15 @@ body#{$theme} {
   #{$theme} .content ul,
   #{$theme} .content ol {
     background-color: $background_1;
+    position: relative;
+    z-index: 2;
  }
 
- /* fill rest of bg above pre tags...chapucilla, just checking if all this works */
+ /* fill rest of bg above pre tags...chapucilla, just checking if all this works, but at least this should be done with script */
  #{$theme} .content pre + p {
    margin-top: -130px !important;
    padding-top: 140px !important;
+   z-index: 1;
  }
 }
 
