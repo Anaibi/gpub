@@ -198,13 +198,20 @@ body#{$theme} {
 }
 
 /* 3 column background fix */
+@media (min-width: 1180px) {
+  #{$theme} .content h2 {
+    max-width: 550px;
+  }
 
-#{$theme} .content {
-  background-color: $ZENBURN_BG !important;
+  #{$theme} .content {
+    background-color: $ZENBURN_BG !important;
+  }
+
+  #{$theme} .content h1,
+  #{$theme} .content h2,
+  #{$theme} .content p {
+    background-color: $background_1;
+ }
 }
-#{$theme} .content h1,
-#{$theme} .content h2,
-#{$theme} .content p {
-  background-color: $background_1;
-}
+
 

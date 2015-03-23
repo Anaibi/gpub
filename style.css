@@ -109,12 +109,16 @@ body#enjoy-mondays {
   background-color: #3f3f3f !important; }
 
 /* 3 column background fix */
-#enjoy-mondays .content {
-  background-color: #3f3f3f !important; }
+@media (min-width: 1180px) {
+  #enjoy-mondays .content h2 {
+    max-width: 550px; }
 
-#enjoy-mondays .content h1,
-#enjoy-mondays .content h2,
-#enjoy-mondays .content p {
-  background-color: #e9e8e3; }
+  #enjoy-mondays .content {
+    background-color: #3f3f3f !important; }
+
+  #enjoy-mondays .content h1,
+  #enjoy-mondays .content h2,
+  #enjoy-mondays .content p {
+    background-color: #e9e8e3; } }
 
 /*# sourceMappingURL=style.css.map */
