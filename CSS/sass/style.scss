@@ -199,12 +199,23 @@ body#{$theme} {
 
 /* 3 column background fix */
 @media (min-width: 1180px) {
+  
+  #{$theme} .content h1,
   #{$theme} .content h2 {
     max-width: 550px;
   }
 
+  .content ul, .content ol {
+    max-width: 530px;
+  }
+
+  #{$theme} .content h1:first-child {
+    padding-top: 30px;
+  }
+
   #{$theme} .content {
     background-color: $ZENBURN_BG !important;
+    padding-top: 0;
   }
 
   #{$theme} .content h1,

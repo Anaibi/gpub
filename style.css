@@ -110,11 +110,19 @@ body#enjoy-mondays {
 
 /* 3 column background fix */
 @media (min-width: 1180px) {
+  #enjoy-mondays .content h1,
   #enjoy-mondays .content h2 {
     max-width: 550px; }
 
+  .content ul, .content ol {
+    max-width: 530px; }
+
+  #enjoy-mondays .content h1:first-child {
+    padding-top: 30px; }
+
   #enjoy-mondays .content {
-    background-color: #3f3f3f !important; }
+    background-color: #3f3f3f !important;
+    padding-top: 0; }
 
   #enjoy-mondays .content h1,
   #enjoy-mondays .content h2,
