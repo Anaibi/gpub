@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-(function($) {  console.log('flatdoc_2 called');
+(function($) {  
   var exports = this;
 
   var marked;
@@ -212,7 +212,7 @@
    *
    * > See: [Transformer](#transformer)
    */
-  Transformer.mangle = function($content) {
+  Transformer.mangle = function($content) { console.log(content);
     this.addIDs($content);
     this.buttonize($content);
     this.smartquotes($content);
@@ -502,10 +502,6 @@
   // http://stackoverflow.com/questions/298750/how-do-i-select-text-nodes-with-jquery
   function getTextNodesIn(el) {
     var exclude = 'iframe,pre,code';
-
-    console.log($(el).find(':not('+exclude+')').andSelf().contents().filter(function() {
-      return this.nodeType == 3 && $(this).closest(exclude).length === 0}));
-    
     return $(el).find(':not('+exclude+')').andSelf().contents().filter(function() {
       return this.nodeType == 3 && $(this).closest(exclude).length === 0;
     });
