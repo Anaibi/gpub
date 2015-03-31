@@ -212,7 +212,7 @@
    *
    * > See: [Transformer](#transformer)
    */
-  Transformer.mangle = function($content) { console.log(content);
+  Transformer.mangle = function($content) { console.log($content);
     this.addIDs($content);
     this.buttonize($content);
     this.smartquotes($content);
