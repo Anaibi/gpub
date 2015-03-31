@@ -212,11 +212,27 @@
    *
    * > See: [Transformer](#transformer)
    */
-  Transformer.mangle = function($content) { console.log($content);
+  Transformer.mangle = function($content) { 
     this.addIDs($content);
     this.buttonize($content);
     this.smartquotes($content);
+    // added function format content 2 col
+    this.format2col($content);
   };
+
+
+  /**
+   * Adds left/right content sets 
+   * if windowWidth > 1200px layout 3 columns
+   * if windowWidth < 1200px layout 2 columns 
+   */
+
+  Transformer.format2col = function($content) {
+    $content.find('h1, h2, h3').each(function() {
+      var $el = $(this); console.log($el);
+    });
+  };
+
 
   /**
    * Adds IDs to headings.
