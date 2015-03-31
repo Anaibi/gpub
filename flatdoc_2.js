@@ -504,7 +504,8 @@
     var exclude = 'iframe,pre,code';
 
     console.log($(el).find(':not('+exclude+')').andSelf().contents().filter(function() {
-      return this.nodeType == 3 && $(this).closest(exclude).length === 0);
+      return this.nodeType == 3 && $(this).closest(exclude).length === 0}));
+    
     return $(el).find(':not('+exclude+')').andSelf().contents().filter(function() {
       return this.nodeType == 3 && $(this).closest(exclude).length === 0;
     });
