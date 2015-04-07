@@ -217,7 +217,7 @@
     this.buttonize($content);
     this.smartquotes($content);
     // added function format content 2 col
-    this.format2col($content);
+   // this.format2col($content);
   };
 
 
@@ -232,7 +232,7 @@
       var $el = $(this); 
       var $wrapLeft = $el.wrap('<div id="' + $el.attr('id') + '-wrap" class="left"></div');
       var $wrapRight = $('<div class="right"></div>');
-      var $next = $el.next(); console.log($next.nodeName);
+      var $next = $el.next(); console.log($next);
      /* var nextSection = function() { 
         return ($next.nodeName === 'h1' | 'h2' | 'h3'); 
       }();
