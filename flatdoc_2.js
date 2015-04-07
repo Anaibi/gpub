@@ -252,8 +252,8 @@
       }
 
       console.log('wrapRight ' + $wrapRight);
-      console.log('wrapRight ' + $wrapLeft);
-    });*/
+      console.log('wrapRight ' + $wrapLeft);*/
+    });
   };
 
 
