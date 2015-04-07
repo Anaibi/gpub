@@ -217,7 +217,7 @@
     this.buttonize($content);
     this.smartquotes($content);
     // added function format content 2 col
-   // this.format2col($content);
+    this.format2col($content);
   };
 
 
