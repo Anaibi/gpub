@@ -221,15 +221,38 @@
   };
 
 
-  /**
+  /** Anaibi
    * Adds left/right content sets 
    * if windowWidth > 1200px layout 3 columns
    * if windowWidth < 1200px layout 2 columns 
    */
 
-  Transformer.format2col = function($content) {
+  Transformer.format2col = function($content) { 
     $content.find('h1, h2, h3').each(function() {
-      var $el = $(this); console.log($el);
+      var $el = $(this); 
+      var $wrapLeft = $el.wrap('<div id="' + $el.attr('id') + '-wrap" class="left"></div');
+      var $wrapRight = $('<div class="right"></div>');
+      var $next = $el.next();
+      var nextSection = function() { 
+        return ($next.nodeName === 'h1' | 'h2' | 'h3'); 
+      }();
+      var codeText = function() { 
+        return ($next.nodeName === 'pre' | 'code')
+      }();
+
+      while (!nextSection) {
+        if (codeText) {
+          $wrapRight.append($next);
+        }
+        else {
+          $wrapLeft.append($next);
+        }
+        
+        $next = $next.next();
+      }
+
+      console.log('wrapRight ' + $wrapRight);
+      console.log('wrapRight ' + $wrapLeft);
     });
   };
 
