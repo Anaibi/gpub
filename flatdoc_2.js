@@ -232,8 +232,8 @@
       var $el = $(this); 
       var $wrapLeft = $el.wrap('<div id="' + $el.attr('id') + '-wrap" class="left"></div');
       var $wrapRight = $('<div class="right"></div>');
-      var $next = $el.next();
-      var nextSection = function() { 
+      var $next = $el.next(); console.log($next.nodeName);
+     /* var nextSection = function() { 
         return ($next.nodeName === 'h1' | 'h2' | 'h3'); 
       }();
       var codeText = function() { 
@@ -253,7 +253,7 @@
 
       console.log('wrapRight ' + $wrapRight);
       console.log('wrapRight ' + $wrapLeft);
-    });
+    });*/
   };
 
 
