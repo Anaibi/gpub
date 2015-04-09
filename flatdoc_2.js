@@ -230,29 +230,43 @@
   Transformer.format2col = function($content) { 
     $content.find('h1, h2, h3').each(function() {
       var $el = $(this); 
-      var $wrapLeft = $el.wrap('<div id="' + $el.attr('id') + '-wrap" class="left"></div');
-      var $wrapRight = $('<div class="right"></div>');
-      var $next = $el.next(); console.log($next.nodeName);
-     /* var nextSection = function() { 
-        return ($next.nodeName === 'h1' | 'h2' | 'h3'); 
-      }();
-      var codeText = function() { 
-        return ($next.nodeName === 'pre' | 'code')
-      }();
+      var $next = $el.next(); 
+      
+      // first $el is h, goes in left div
+      var $wrapLeft = $('<div class="left" id="' + $el.attr('id') + '-left"></div'); 
+      // $wrapLeft.append($el);
 
-      while (!nextSection) {
-        if (codeText) {
-          $wrapRight.append($next);
+      // right div only code/pre elements
+      var $wrapRight = $('<div class="right"></div>');
+      
+      // check all $el siblings and distribute
+      // TODO but needs mark to situate code in position correlated to previous text element
+      // not in empty div (would alineate with header)
+
+      // options: (easy - quick) two copies, just css text one side code other
+      //                         or copy code in only one new div -right keep original, get position and situate second copy
+      //          (loop) and distribute but a) for small layout, has to stay in line, b) for big layout needs position anyway
+      //                 so distribute like: <div left>all ps, uls, etc</div><div right>code</div><div left> more ps etc</div>
+      //                 <div right>more code</div> for each h element and css in stack or in columns f(width)
+      
+      // if viewport width > ?X add right div = 3rd column and copy/insert code + hide in content = 2nd column
+      // if width < ?X as is
+      
+      function isCodeText(nodeName) { 
+        return (nodeName === 'PRE' || nodeName === 'CODE')
+      };
+
+     /* function getNext(elem) {
+        if ($elem.next()) {
+          hasNext = true;
+          return $elem.next();
+        } else {
+          hasNext = false;
         }
-        else {
-          $wrapLeft.append($next);
-        }
-        
-        $next = $next.next();
-      }
+      }*/
 
       console.log('wrapRight ' + $wrapRight);
-      console.log('wrapRight ' + $wrapLeft);*/
+      console.log('wrapRight ' + $wrapLeft);
     });
   };
 
