@@ -234,6 +234,10 @@ body#{$theme} {
     z-index: 2;
  }
 
+ #{$theme} .content-root {
+   background-color: $ZENBURN_BG !important;
+ }
+
  /* fill rest of bg above pre tags...chapucilla, just checking if all this works, but at least this should be done with script */
  #{$theme} .content pre + p {
    margin-top: -130px !important;

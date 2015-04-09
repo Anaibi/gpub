@@ -138,6 +138,9 @@ body#enjoy-mondays {
     position: relative;
     z-index: 2; }
 
+  #enjoy-mondays .content-root {
+    background-color: #3f3f3f !important; }
+
   /* fill rest of bg above pre tags...chapucilla, just checking if all this works, but at least this should be done with script */
   #enjoy-mondays .content pre + p {
     margin-top: -130px !important;
