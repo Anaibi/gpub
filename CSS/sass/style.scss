@@ -49,34 +49,36 @@ $Dosis: 'Dosis', sans-serif;
 /* */
 /* enjoy-mondays pattern variables */
 
-/*$theme: enjoy-mondays;*/
-$theme: #enjoy-mondays;
+/* test template variables */
+/* $theme, $background combos, $a_color, $base_font_color and set into rule / options string */
+
+  /*$theme: enjoy-mondays;*/
+  $theme: #enjoy-mondays;
 
 
-/* colors */
+  /* colors */
+  $background_1 : $LIGHT_GRAY;
+  $background_2 : $DARK_GRAY;
+  $background_3 : $DARK_BLUE;
+  $background_4 : $FUXSIA;
 
-$background_1 : $LIGHT_GRAY;
-$background_2 : $DARK_GRAY;
-$background_3 : $DARK_BLUE;
-$background_4 : $FUXSIA;
-
-$a_color: $DARK_GRAY;
-$base_font_color: $GRAY;
+  $a_color: $DARK_GRAY;
+  $base_font_color: $GRAY;
 
 
-/* typos */
+  /* typos */
 
-$font_1: $Lato;
-$font_2: $Dosis;
+  $font_1: $Lato;
+  $font_2: $Dosis;
 
-$bolder: 900;
-$light: 100;
-$bold: 600;
+  $bolder: 900;
+  $light: 100;
+  $bold: 600;
 
-$base_font_size: 62.5%; 
-$p_size: 1.25em; 
-$a_size: 1em; 
-$h_size: 2.5em; 
+  $base_font_size: 62.5%; 
+  $p_size: 1.25em; 
+  $a_size: 1em; 
+  $h_size: 2.5em; 
 
 
 /* */
