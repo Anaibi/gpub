@@ -24,11 +24,11 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   
   <script src="https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/legacy.js"></script>
-  <!-- testing content return localhost -->
+  <!-- for localhost testing -->
   <!--script src="legacy.js"></script-->
  
   <script src="https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/flatdoc.js"></script>
-  <!-- testing content return localhost -->
+  <!-- for localhost testing -->
   <!--script src="flatdoc_2.js"></script--> 
   
   <!-- Flatdoc theme -->
@@ -36,37 +36,40 @@
   <script src="https://cdn.rawgit.com/rstacruz/flatdoc/v0.9.0/theme-white/script.js"></script>
 
   <!-- Enjoy-Mondays theme --> 
-  <link  href="style.css" rel="stylesheet"><!-- check correct way reference this! any other path option wasn't working --> 
+  <link  href="enjoy-mondays.css" rel="stylesheet"><!-- check correct way reference this! any other path option wasn't working --> 
+  
+  <!-- Enjoy-Mondays script --> 
+  <script  src="main.js"></script><!-- check correct way reference this! any other path option wasn't working --> 
 
   <!-- Meta -->
   <meta content="gpub" property="og:title">
   <meta content="gpub" name="description">
 
- <!-- HIGHLIGHT.JS -->
- <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/zenburn.min.css">
- <!-- testing content return localhost -->
- <!--link rel="stylesheet" href="zenburn.css"></script-->
+  <!-- HIGHLIGHT.JS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/zenburn.min.css">
+  <!-- for localhost testing -->
+  <!--link rel="stylesheet" href="zenburn.css"></script-->
  
- <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
- <!-- testing content return localhost -->
- <!--script src="highlight.pack.js"></script-->
+  <!--script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+  <!-- for localhost testing -->
+  <!--script src="highlight.pack.js"></script-->
 
- <!-- Initializer -->
-<script>
+  <!-- Initializer -->
+  <script>
     Flatdoc.run({
       fetcher: Flatdoc.github('Anaibi/gpub'),
-      highlight: function() {
-        return hljs.initHighlightingOnLoad();
-      }
-    });
-</script>
-
+        highlight: function() {
+          return hljs.initHighlightingOnLoad();
+        }
+      });
+  </script>
 </head>
+
 <body role="flatdoc" id="enjoy-mondays" class="large-brief big-h3">
 
   <div id="main-header" class="header fixed top0 fullwidth">
     <div class="left">
-      <h1>Gpub</h1>
+      <h1>gpub</h1>
       <ul>  
         <li><a href="https://github.com/Anaibi/gpub">View on GitHub</a></li>
         <li><a href="https://github.com/Anaibi/gpub/issues">Issues</a></li>
@@ -82,24 +85,26 @@
   <div class="content-root">
     <div class="menubar topHeader">
       <div class="menu section" role="flatdoc-menu"></div>
+      <div id="logo-footer" class="logo"><img src="smile.png" title="Enjoy Mondays" alt="Enjoy Mondays"></div>
     </div>
     <div role="flatdoc-content" class="content"></div>
   </div>
-    <!-- GOOGLE FONTS -->
-	  <script type="text/javascript">
-			WebFontConfig = {
-		    	google: { families: [ 'Lato:400,100,700,900:latin','Dosis: 600:latin' ] }
-		  	};
-		  	(function() {
-		    	var wf = document.createElement('script');
-		    	wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-		      		'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-		    	wf.type = 'text/javascript';
-		    	wf.async = 'true';
-		    	var s = document.getElementsByTagName('script')[0];
-		    	s.parentNode.insertBefore(wf, s);
-		  	})(); 
-	  	</script>
+  
+  <!-- GOOGLE FONTS -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ 'Lato:400,100,700,900:latin','Dosis: 600:latin' ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })(); 
+  </script>
 
 </body>
 </html>

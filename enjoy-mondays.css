@@ -1,38 +1,236 @@
+/*=CLASSES-------------------------------------------------*/
+.clearfix {
+  clear: both; }
 
-/* *********************************** defaults */
+.fixed {
+  position: fixed;
+  z-index: 1000; }
 
-/*body {
-	background-color: #E9E8E3; 
-	font-family: 'Lato', sans-serif;
-	font-weight: 100;
-	color: black;
-}
+.fullwidth {
+  width: 100%; }
 
-h1, h2, h3, h4, h5,h6 {
-	font-family: 'Dosis', sans-serif;
-	font-weight: 600; 
-}
-h1 {
-	font-size: inherit;
-	text-transform: uppercase;
-}
-*/
-/* ********************************* base styles */
+.screan-reader-text {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  font-size: 0; }
 
-/* ************ fonts */
-/* lato light (100)
-/* lato regular (400)
-/* lato bold (700)
-/* lato black (900)
-/* dosis semibold (600)
- */
+.hidden {
+  display: none; }
 
-/* ******************************* basic layout */
+.top0 {
+  top: 0; }
 
-/* ************************************ HEADER */
+/*--------------------------------------------------------------------*/
+/*=ENJOY-MONDAYS CSS--------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+/* positioning, box model, typo, visual*/
+/*=DEFAULTS---------------------*/
+body#enjoy-mondays {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  color: #4a4a4a;
+  background-color: #e9e8e3; }
 
+/* left menu and central content background need re-stating */
+#enjoy-mondays .content-root,
+#enjoy-mondays .menubar,
+#enjoy-mondays .content {
+  background-color: #e9e8e3; }
 
-/* ******************* menu navigation */
+/*=LINKS-----------------------*/
+/* ALL links */
+#enjoy-mondays a {
+  text-decoration: none;
+  font-size: 1em;
+  color: #3a3a3a;
+  font-weight: 900; }
 
+#enjoy-mondays a:hover, #enjoy-mondays a.active {
+  border-bottom: 3px solid #df3f54; }
 
+/* remove dash from links FLATDOC OVERRIDE */
+#enjoy-mondays .menu a.active:after {
+  background: none; }
 
+/* SIDE MENU links */
+#enjoy-mondays .menu a:visited,
+#enjoy-mondays .menu a:hover,
+#enjoy-mondays .menu a.active {
+  margin-left: -3px;
+  border-left: 3px solid #df3f54;
+  border-bottom: none;
+  color: #df3f54; }
+
+/* make room for border-left as some flatdoc level-x links don't have */
+#enjoy-mondays .menu .level-2 > a {
+  padding-left: 3px; }
+
+/*=HEADERS--------------------*/
+#enjoy-mondays h1,
+#enjoy-mondays h2,
+#enjoy-mondays h3,
+#enjoy-mondays h4,
+#enjoy-mondays h5,
+#enjoy-mondays h6 {
+  font-family: "Dosis", sans-serif !important;
+  font-weight: 600 !important; }
+
+#enjoy-mondays h1 {
+  font-size: 2.5em;
+  text-transform: uppercase; }
+
+/*=NAV HEADER------------------*/
+#enjoy-mondays .header {
+  height: 20px;
+  background-color: #e9e8e3; }
+
+#enjoy-mondays #fixed-header-aux {
+  height: 51px; }
+
+/* TODO if menubar has class fixed, animate header to the left ? */
+#enjoy-mondays .header .left {
+  position: relative;
+  left: 220px; }
+
+/*=CONTENT--------------------*/
+#enjoy-mondays p {
+  font-size: 1.25em; }
+
+#enjoy-mondays pre {
+  font-size: 1.15em; }
+
+#enjoy-mondays hr {
+  border: 0;
+  height: 3px;
+  width: 18%;
+  margin: 0 auto 3%;
+  clear: both; }
+
+/*=HIGHLIGHT JS OVERRIDE-----*/
+#enjoy-mondays .hljs {
+  background-color: #3f3f3f !important; }
+
+/*=LOGO FOOTER---------------*/
+#enjoy-mondays #logo-footer {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 28px;
+  height: auto; }
+
+#enjoy-mondays #logo-footer img {
+  width: 100%; }
+
+/*=3 COLUMN BACKGROUND for big layout--------------------*/
+@media (min-width: 1180px) {
+  #enjoy-mondays .content h1,
+  #enjoy-mondays .content h2,
+  #enjoy-mondays .content h3,
+  #enjoy-mondays .content h4,
+  #enjoy-mondays .content h5,
+  #enjoy-mondays .content h6 {
+    width: 550px;
+    margin: 0;
+    padding-left: 40px; }
+
+  .content ul, .content ol {
+    margin-left: 0;
+    padding-left: 60px !important; }
+
+  #enjoy-mondays .content h1:first-child {
+    padding-top: 30px; }
+
+  #enjoy-mondays .content > *:last-child {
+    padding-bottom: 40px; }
+
+  #enjoy-mondays .content {
+    background-color: #3f3f3f !important;
+    padding-top: 0;
+    padding-bottom: 0; }
+
+  #enjoy-mondays .content h1,
+  #enjoy-mondays .content h2,
+  #enjoy-mondays .content h3,
+  #enjoy-mondays .content h4,
+  #enjoy-mondays .content h5,
+  #enjoy-mondays .content h6,
+  #enjoy-mondays .content p,
+  #enjoy-mondays .content ul,
+  #enjoy-mondays .content ol {
+    background-color: #e9e8e3;
+    position: relative;
+    z-index: 2; }
+
+  #enjoy-mondays .content-root {
+    background-color: #3f3f3f !important; } }
+/*=format HEADER iframes WHEN UNDER 767px--------------------*/
+/* (when side menu drops out) */
+@media (max-width: 767px) {
+  /*=header title and menu-----------*/
+  #enjoy-mondays .header .left {
+    left: 0; }
+
+  /* github buttons */
+  #enjoy-mondays .header .right {
+    right: 84px; }
+
+  /* github follow button */
+  #enjoy-mondays .header .right iframe:first-child {
+    width: 145px;
+    float: left; }
+
+  /* github star button */
+  #enjoy-mondays .header .right iframe:nth-child(2) {
+    width: 75px;
+    float: left; }
+
+  /*=format CONTENT when under 767px = centered content--------*/
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; } }
+/*=STACK HEADER iframes WHEN UNDER 650px-----------------------*/
+@media (max-width: 650px) {
+  /* adapt header height to stack in two rows */
+  #enjoy-mondays .header {
+    height: 47px; }
+
+  #enjoy-mondays #fixed-header-aux {
+    height: 78px; }
+
+  /* header title and menu */
+  #enjoy-mondays .header .left h1 {
+    float: left;
+    margin-right: 20px; }
+
+  #enjoy-mondays .header .left ul {
+    float: left; }
+
+  #enjoy-mondays .header .left li {
+    float: left;
+    margin-right: 10px; }
+
+  /* github buttons */
+  #enjoy-mondays .header .right {
+    left: 30px;
+    top: 47px;
+    display: block; } }
+/*=STACK HEADER iframes WHEN UNDER 300px-----------------------*/
+@media (max-width: 300px) {
+  #enjoy-mondays .header {
+    height: 47px; }
+
+  #enjoy-mondays #fixed-header-aux {
+    height: 78px; }
+
+  /* header title and menu */
+  #enjoy-mondays .header .left h1 {
+    margin-bottom: 12px; }
+
+  /* github buttons */
+  #enjoy-mondays .header .right {
+    display: none; } }
